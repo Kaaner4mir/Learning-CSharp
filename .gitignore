@@ -1,0 +1,37 @@
+# Visual Studio geçici klasörleri
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Derleme çıktıları
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# NuGet paketleri (paketler tekrar indirilebilir)
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+
+# Rider IDE dosyaları
+.idea/
+
+# Sistem dosyaları
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Log ve geçici dosyalar
+*.log
+*.tmp
+
+# Publish klasörü
+publish/
+
+# User secret dosyaları
+*.userosscache
+*.sln.docstates
