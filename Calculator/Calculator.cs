@@ -1,8 +1,9 @@
-﻿using Microsoft.VisualBasic;
-using System.Text;
+﻿using System.Text;
 
 class Calculator
 {
+    static double memory = 0;
+
     private static void Main()
     {
         Console.OutputEncoding = Encoding.UTF8;
@@ -23,6 +24,14 @@ class Calculator
                     case 4: BasicOperation((a, b) => { if (b == 0) throw new DivideByZeroException(); return a / b; }); break;
                     case 5: Factorial(); break;
                     case 6: Exponentiation(); break;
+                    case 7: Root(); break;
+                    case 8: Logarithm(); break;
+                    case 9: Trigonometry(); break;
+                    case 10: MemoryPlus(); break;
+                    case 11: MemoryMinus(); break;
+                    case 12: MemoryClear(); break;
+                    case 13: MemoryRecall(); break;
+                    case 14: Exit(); break;
                     default: Invalid(); break;
                 }
                 Continue();
@@ -102,6 +111,57 @@ class Calculator
 
     }
 
+    /// <summary> Kök işlemlerini yapar. </summary>
+    private static void Root()
+    {
+        Console.Write("\nEnter the radicand: ");
+        if (!double.TryParse(Console.ReadLine(), out double radicand))
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\nInvalid input! Radicand must be a number.");
+            Console.ResetColor();
+            return;
+        }
+
+        Console.Write("Enter the degree of the root: ");
+        if (!int.TryParse(Console.ReadLine(), out int rootDegree) || rootDegree <= 0)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\nInvalid root degree! It must be a positive integer greater than zero.");
+            Console.ResetColor();
+            return;
+        }
+
+        if (rootDegree % 2 == 0 && radicand < 0)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\nYou cannot take an even root of a negative number (result would be complex).");
+            Console.ResetColor();
+            return;
+        }
+
+        double result = Math.Pow(radicand, 1.0 / rootDegree);
+
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\n{rootDegree}ᵗʰ root of {radicand} = {result:F4}");
+        Console.ResetColor();
+    }
+
+    /// <summary> Logaritma işlemini yapar. </summary>
+    private static void Logarithm()
+    {
+        Console.Write("\nEnter the number: ");
+        if (!double.TryParse(Console.ReadLine(), out double num) || num <= 0) { Invalid(); return; }
+        Console.Write("\nEnter the base number: ");
+        if (!double.TryParse(Console.ReadLine(), out double baseNum) || baseNum <= 0 || baseNum == 1) { Invalid(); return; }
+
+        double result = Math.Log(num) / Math.Log(baseNum);
+
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\nLog₍{baseNum}₎({num}) = {result:F4}");
+        Console.ResetColor();
+    }
+
     /// <summary> Üs alma işlemini yapar. </summary>
     private static void Exponentiation()
     {
@@ -126,6 +186,188 @@ class Calculator
         Console.ResetColor();
     }
 
+    /// <summary> Trigonometrik işlemleri yapar. </summary>
+    private static void Trigonometry()
+    {
+        TrigonometricOperations();
+        Console.Write("\nSelect the action you want to perform: ");
+        if (!short.TryParse(Console.ReadLine(), out short act)) { Invalid(); return; }
+
+        switch (act)
+        {
+            case 1: Sine(); break;
+            case 2: Cosine(); break;
+            case 3: Tangent(); break;
+            case 4: Cotangent(); break;
+            case 5: Secant(); break;
+            case 6: Cosecant(); break;
+            default: Invalid(); break;
+        }
+
+    }
+
+    /// <summary> Sinüs işlemini yapar. </summary>
+    private static void Sine()
+    {
+        Console.Write("\nEnter the degree: ");
+        if (!double.TryParse(Console.ReadLine(), out double degree)) { Invalid(); return; }
+
+        double radian = degree * (Math.PI / 180);
+
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\nSine {degree}° : {Math.Sin(radian)}");
+        Console.ResetColor();
+    }
+
+    /// <summary> Kosinüs işlemini yapar. </summary>
+    private static void Cosine()
+    {
+        Console.Write("\nEnter the degree: ");
+        if (!double.TryParse(Console.ReadLine(), out double degree)) { Invalid(); return; }
+
+        double radian = degree * (Math.PI / 180);
+
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\nCosine {degree}° : {Math.Cos(radian)}");
+        Console.ResetColor();
+    }
+
+    /// <summary> Tanjant işlemini yapar. </summary>
+    private static void Tangent()
+    {
+        Console.Write("\nEnter the degree: ");
+        if (!double.TryParse(Console.ReadLine(), out double degree)) { Invalid(); return; }
+
+        double radian = degree * (Math.PI / 180);
+
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\\nTangent {degree}° : {Math.Tan(radian)}");
+        Console.ResetColor();
+    }
+
+    /// <summary> Kotanjant işlemini yapar. </summary>
+    private static void Cotangent()
+    {
+        Console.Write("\nEnter the degree: ");
+        if (!double.TryParse(Console.ReadLine(), out double degree)) { Invalid(); return; }
+
+        double radian = degree * (Math.PI / 180);
+
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\nCotangent {degree}° : {1 / Math.Tan(radian)}");
+        Console.ResetColor();
+    }
+
+    /// <summary> Sekant işlemini yapar. </summary>
+    private static void Secant()
+    {
+        Console.Write("\nEnter the degree: ");
+        if (!double.TryParse(Console.ReadLine(), out double degree)) { Invalid(); return; }
+
+        double radian = degree * (Math.PI / 180);
+
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\nSecant {degree}° : {1 / Math.Cos(radian)}");
+        Console.ResetColor();
+    }
+
+    /// <summary> Kosekant işlemini yapar. </summary>
+    private static void Cosecant()
+    {
+        Console.Write("\nEnter the degree: ");
+        if (!double.TryParse(Console.ReadLine(), out double degree)) { Invalid(); return; }
+
+        double radian = degree * (Math.PI / 180);
+
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\nCosecant {degree}° : {1 / Math.Sin(radian)}");
+        Console.ResetColor();
+    }
+
+    /// <summary> İstenilen sayıyı hazıfaya ekler. </summary>
+    private static void MemoryPlus()
+    {
+        Console.Write("\nEnter the number you want to add to memory: ");
+        if (!double.TryParse(Console.ReadLine(), out double addNumber)) { Invalid(); return; }
+
+        memory += addNumber;
+
+        Valid();
+
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\nMemory: {memory}  <>  Added: {addNumber}");
+        Console.ResetColor();
+    }
+
+    /// <summary> İstenilen sayıyı hafızadan siler. </summary>
+    private static void MemoryMinus()
+    {
+        Console.Write("\nEnter the number you want to remove from memory: ");
+        if (!double.TryParse(Console.ReadLine(), out double addNumber)) { Invalid(); return; }
+
+        memory -= addNumber;
+
+        Valid();
+
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\nMemory: {memory}  <>  Deleted: {addNumber}");
+        Console.ResetColor();
+    }
+
+    /// <summary> Hafızayı sıfırlar. </summary>
+    private static void MemoryClear()
+    {
+        Valid();
+
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\nMemory: {memory}");
+        Console.ResetColor();
+    }
+
+    /// <summary> Hafızayı ekrana getirir. </summary>
+    private static void MemoryRecall()
+    {
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"\nMemory: {memory}");
+        Console.ResetColor();
+    }
+
+    /// <summary> Çıkış işlemini başlatır. </summary>
+    private static void Exit()
+    {
+        Console.Write("\nAre you sure you want to exit (Y/N): ");
+        string? act = Console.ReadLine();
+
+        if (string.IsNullOrEmpty(act) || string.IsNullOrWhiteSpace(act)) { Invalid(); return; }
+        if (act.ToLower() == "y")
+        {
+            Environment.Exit(0);
+        }
+        else if (act.ToLower() == "n")
+        {
+            return;
+        }
+        else
+        {
+            return;
+        }
+    }
+
+    /// <summary>
+    /// Trigonometrik operasyonları numaralandırır ve renklendirir.
+    /// Konsolda numarayı kırmızı işlemi is beyaz renkte yazar.
+    /// </summary>
+    private static void TrigonometricOperations()
+    {
+        Console.Clear();
+        Operation("1. ", "Sine        | 📐");
+        Operation("2. ", "Cosine      | 📐");
+        Operation("3. ", "Tangent     | 📐");
+        Operation("4. ", "Cotange     | 📐");
+        Operation("5. ", "Secant      | 📐");
+        Operation("6. ", "Cosecan     | 📐");
+    }
+
     /// <summary> Herhangi bir tuşa basılana kadar ekranı bekletir. </summary>
     private static void Continue()
     {
@@ -144,6 +386,16 @@ class Calculator
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("\n❌ You have performed an invalid operation.");
         Continue();
+        Console.ResetColor();
+        Console.CursorVisible = true;
+    }
+
+    /// <summary> İşlem başarılı bir şekilde gerçekleştiğinde bilgi mesajı verir. </summary>
+    private static void Valid()
+    {
+        Console.CursorVisible = false;
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("\n✔️ Your transaction has been successfully completed..");
         Console.ResetColor();
         Console.CursorVisible = true;
     }
