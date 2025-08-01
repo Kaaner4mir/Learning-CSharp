@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36310.24
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{D5EF6134-32E7-43CA-9D9C-BF73CD0D7FB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomatedTellerMachine", "AutomatedTellerMachine\AutomatedTellerMachine.csproj", "{5CB02654-21FB-4944-BD82-832225E63828}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtmSimulation", "AtmSimulation\AtmSimulation.csproj", "{D163A3F9-F891-4CE1-9181-51204B7714BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{D5EF6134-32E7-43CA-9D9C-BF73CD0D7FB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5EF6134-32E7-43CA-9D9C-BF73CD0D7FB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5EF6134-32E7-43CA-9D9C-BF73CD0D7FB6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5CB02654-21FB-4944-BD82-832225E63828}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5CB02654-21FB-4944-BD82-832225E63828}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5CB02654-21FB-4944-BD82-832225E63828}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5CB02654-21FB-4944-BD82-832225E63828}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D163A3F9-F891-4CE1-9181-51204B7714BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D163A3F9-F891-4CE1-9181-51204B7714BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D163A3F9-F891-4CE1-9181-51204B7714BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D163A3F9-F891-4CE1-9181-51204B7714BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
