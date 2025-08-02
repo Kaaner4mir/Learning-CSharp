@@ -18,10 +18,20 @@ class AutomatedTellerMachine
     /// </summary>
     private static void Main()
     {
-        Example();
-
         Console.OutputEncoding = Encoding.UTF8;
 
+        Example();
+
+        UserControl();
+
+        DisplayMenu();
+    }
+
+    /// <summary>
+    /// Menüyü ve yapılacak operasyonları gösterir.
+    /// </summary>
+    private static void DisplayMenu()
+    {
         while (true)
         {
             Loading();
@@ -45,6 +55,52 @@ class AutomatedTellerMachine
             }
 
             Continue();
+        }
+    }
+
+    /// <summary>
+    /// Kullanıcı kontrolü yapar.
+    /// </summary>
+    private static void UserControl()
+    {
+        int attempt = 0;
+        int registeredCardPassword = 1111;
+
+        while (attempt < 4)
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write("\n🔑 Bankamıza kayıtlı 4 haneli kart şifrenizi giriniz: ");
+            Console.ResetColor();
+            if (!int.TryParse(Console.ReadLine(), out int inputVal)) { Invalid(); continue; }
+
+            if (inputVal == registeredCardPassword)
+            {
+                Console.CursorVisible = false;
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("\n✔️ Şifreniz doğru... Hoş Geldiniz");
+                Thread.Sleep(3000);
+                Console.CursorVisible = true;
+                break;
+            }
+            else
+            {
+                Console.CursorVisible = false;
+                attempt++;
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine($"\nHatalı şifre girdiniz! Kalan deneme hakkı: {4 - attempt}");
+                Console.ResetColor();
+                Console.CursorVisible = true;
+            }
+
+            if (attempt == 4)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.WriteLine("\nKartınız güvenliğiniz sebebi ile bloke edilmiştir.\nEn yakın sürede bankamızla iletişime geçiniz.\n" +
+                    "Müşteri Hizmetleri İletişim Numarası: 0850 333 22 11");
+                Console.ResetColor();
+                Continue();
+                Environment.Exit(0);
+            }
         }
     }
 
