@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtmSimulation", "AtmSimulation\AtmSimulation.csproj", "{D163A3F9-F891-4CE1-9181-51204B7714BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberGuessingGame", "NumberGuessingGame\NumberGuessingGame.csproj", "{BC6359E0-0B28-42F1-9DD1-9E5E2E33D4C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D163A3F9-F891-4CE1-9181-51204B7714BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D163A3F9-F891-4CE1-9181-51204B7714BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D163A3F9-F891-4CE1-9181-51204B7714BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC6359E0-0B28-42F1-9DD1-9E5E2E33D4C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC6359E0-0B28-42F1-9DD1-9E5E2E33D4C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC6359E0-0B28-42F1-9DD1-9E5E2E33D4C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC6359E0-0B28-42F1-9DD1-9E5E2E33D4C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
