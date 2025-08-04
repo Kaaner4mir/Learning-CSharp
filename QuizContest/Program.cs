@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
 
 class Program
 {
@@ -48,8 +46,12 @@ class Program
         }
 
         Console.WriteLine($"\nQuiz tamamlandı! Toplam puanınız: {_yourScore}");
+        Continue();
     }
 
+    /// <summary>
+    /// Soruları listeye ekler.
+    /// </summary>
     private static void ExampleQuestions()
     {
         _questions.Add(new Questions { Id = 1, Question = "1 kilogram kaç gramdır?", Answer = "1000", Point = 5 });
@@ -70,6 +72,9 @@ class Program
         _questions.Add(new Questions { Id = 16, Question = "Türkiye'nin en kalabalık şehri hangisidir?", Answer = "İstanbul", Point = 20 });
     }
 
+    /// <summary>
+    /// Kullanıcının devam etmesi için ekran temizliği ve bekleme sağlar.
+    /// </summary>
     private static void Continue()
     {
         Console.CursorVisible = false;
