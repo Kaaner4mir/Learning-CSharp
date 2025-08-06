@@ -1,74 +1,63 @@
-# 🎯 Number Guessing Game
+# 🎯 Sayı Tahmin Oyunu
 
-## 📚 Description
+## 📚 Açıklama
 
-This is a **console-based**, interactive **number guessing game** written in **C#**.  
-The computer picks a random number between 1 and 100, and you try to guess it.  
-You have a maximum of 10 attempts. After each guess, you get a hint whether the number is higher or lower.  
-When you guess correctly or run out of attempts, you can choose to play again.
-
----
-
-## ✨ Features
-
-### ✅ Game Mechanics
-- Random number selection between 1 and 100  
-- Maximum 10 guesses per game  
-- Helpful hints ("try higher" or "try lower") after each guess  
-- Friendly error messages on invalid input  
-- Option to restart the game after win or loss  
-
-### 🎨 User Experience
-- Colorful and engaging console output  
-- Clear, fun, and meaningful messages  
-- Simple and intuitive command line interface
+Bu proje, **C#** ile yazılmış **konsol tabanlı**, etkileşimli bir **sayı tahmin oyunudur**.  
+Bilgisayar 1 ile 100 arasında rastgele bir sayı seçer ve siz bu sayıyı tahmin etmeye çalışırsınız.  
+Toplamda en fazla 10 tahmin hakkınız vardır. Her tahminden sonra sayının daha yüksek mi yoksa daha düşük mü olduğunu belirten bir ipucu alırsınız.  
+Doğru tahmin ettiğinizde veya tahmin hakkınız bittiğinde oyunu yeniden başlatma seçeneğiniz olur.
 
 ---
 
-## ▶️ How to Run
+## ✨ Özellikler
 
-1. Clone or download the repository:
+### ✅ Oyun Mekanikleri
+- 1 ile 100 arasında rastgele sayı seçimi  
+- Her oyun için maksimum 10 tahmin hakkı  
+- Her tahminden sonra ipucu ("daha yüksek dene" veya "daha düşük dene")  
+- Geçersiz girişlerde kullanıcı dostu hata mesajları  
+- Kazanma veya kaybetme sonrası oyunu yeniden başlatma seçeneği  
+
+### 🎨 Kullanıcı Deneyimi
+- Renkli ve ilgi çekici konsol çıktısı  
+- Anlaşılır, eğlenceli ve anlamlı mesajlar  
+- Basit ve sezgisel komut satırı arayüzü
+
+---
+
+## ▶️ Nasıl Çalıştırılır?
+
+1. Depoyu klonlayın veya indirin:
    ```bash
    git clone https://github.com/Kaaner4mir/NumberGuessingGame.git
-   ```
-2. Open the project in **Visual Studio 2022** or any C# IDE.  
-3. Run the application using `Ctrl + F5` (Start without debugging).  
-4. Follow the prompts in the console to guess the number.
+Projeyi Visual Studio 2022 veya herhangi bir C# IDE'sinde açın.
 
----
+Ctrl + F5 ile uygulamayı çalıştırın (Hata ayıklamadan başlat).
 
-## 🧩 Sample Game Flow
+Konsoldaki yönlendirmeleri takip ederek sayıyı tahmin edin.
 
-```
-❓ I've thought of a number between 1 and 100, let's see if you can guess it: 50
+🧩 Örnek Oyun Akışı
+❓ 1 ile 100 arasında bir sayı tuttum, bakalım tahmin edebilecek misin: 50
 
-😅 Not quite! Remaining attempts: 9
-⬆ Try a higher number!
+😅 Henüz değil! Kalan tahmin hakkı: 9
+⬆ Daha yüksek bir sayı dene!
 
-❓ I've thought of a number between 1 and 100, let's see if you can guess it: 75
+❓ 1 ile 100 arasında bir sayı tuttum, bakalım tahmin edebilecek misin: 75
 
-🚀 Wow! Did you read my mind? You guessed it!
+🚀 Vay canına! Aklımı mı okudun? Doğru tahmin ettin!
 
-🎲 Would you like to try again or retire? (Y/N):
-```
+🎲 Tekrar denemek ister misin yoksa emekli mi oluyorsun? (E/H):
+🔍 Bu Proje Neden Kullanılmalı?
+Yeni başlayanlar için ideal: Temel C# kavramlarını eğlenceli bir şekilde pekiştir
 
----
+Konsol uygulama deneyimi: Konsol renkleri, giriş kontrolü, döngüler, koşullar ve metotlar hakkında bilgi edin
 
-## 🔍 Why Use This Project?
+Temiz ve okunabilir kod: İyi yorumlanmış ve takip etmesi kolay
 
-- **Perfect for beginners:** Reinforce core C# concepts while having fun  
-- **Console app experience:** Learn about console colors, input handling, loops, conditions, and methods  
-- **Clean and readable code:** Well-commented and easy to follow  
-- **Compact and educational:** Simple to understand and adapt to your own projects
+Eğitici ve sade: Kendi projelerine uyarlaması kolay
 
----
+📄 Lisans
+Bu proje MIT Lisansı ile lisanslanmıştır.
 
-## 📄 License
-
-This project is licensed under the **MIT License**.
-
----
-
-## 👤 Author
-
-**Kaaner4mir** – Exploring software development with C#.
+👤 Yazar
+Kaaner4mir – C# ile yazılım geliştirme yolculuğunda keşfe çıkıyor.

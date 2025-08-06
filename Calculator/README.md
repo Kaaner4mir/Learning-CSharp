@@ -1,94 +1,93 @@
+# 🧮 Konsol Hesap Makinesi
 
-# 🧮 Console Calculator
+## 📚 Açıklama
 
-## 📚 Description
-
-This is a feature-rich, user-friendly **console-based calculator application** written in **C#** using **Visual Studio 2022**.  
-It supports a wide range of mathematical operations including basic arithmetic, trigonometry, powers, roots, memory features, and more — all accessible from the command line.
-
----
-
-## ✨ Features
-
-### ✅ Basic Operations
-- ➕ Addition  
-- ➖ Subtraction  
-- ❌ Multiplication  
-- ➗ Division
-
-### 🔢 Advanced Functions
-- ❗ Factorial  
-- 🔼 Exponentiation  
-- 🔽 Root Calculation  
-- 📊 Logarithm with custom base
-
-### 📐 Trigonometric Functions
-- Sine  
-- Cosine  
-- Tangent  
-- Cotangent  
-- Secant  
-- Cosecant
-
-### 💾 Memory Functions
-- M+ (Add to memory)  
-- M- (Subtract from memory)  
-- MC (Clear memory)  
-- MR (Recall memory)
-
-### 🔚 Exit Function
-- Secure exit with user confirmation
+Bu, **Visual Studio 2022** kullanılarak **C#** ile yazılmış özellik dolu, kullanıcı dostu bir **konsol tabanlı hesap makinesi uygulamasıdır**.  
+Temel aritmetik, trigonometri, kuvvetler, kökler, bellek fonksiyonları ve daha fazlasını destekler — tümü komut satırından erişilebilir.
 
 ---
 
-## ▶️ How to Run
+## ✨ Özellikler
 
-1. Clone or download the repository:
+### ✅ Temel İşlemler
+- ➕ Toplama  
+- ➖ Çıkarma  
+- ❌ Çarpma  
+- ➗ Bölme
+
+### 🔢 Gelişmiş Fonksiyonlar
+- ❗ Faktöriyel  
+- 🔼 Üs Alma  
+- 🔽 Kök Hesaplama  
+- 📊 Özel tabanlı logaritma
+
+### 📐 Trigonometrik Fonksiyonlar
+- Sinüs  
+- Kosinüs  
+- Tanjant  
+- Kotanjant  
+- Sekant  
+- Kosekant
+
+### 💾 Bellek Fonksiyonları
+- M+ (Belleğe ekle)  
+- M- (Bellekten çıkar)  
+- MC (Belleği temizle)  
+- MR (Belleği çağır)
+
+### 🔚 Çıkış Fonksiyonu
+- Kullanıcı onaylı güvenli çıkış
+
+---
+
+## ▶️ Nasıl Çalıştırılır
+
+1. Depoyu klonlayın veya indirin:
    ```bash
    git clone https://github.com/YourUsername/Console-Calculator.git
    ```
 
-2. Open the project in **Visual Studio 2022**.
+2. Projeyi **Visual Studio 2022** ile açın.
 
-3. Press `Ctrl + F5` to run the console app without debugging.
+3. `Ctrl + F5` tuşlarına basarak uygulamayı debug olmadan çalıştırın.
 
 ---
 
-## 🧪 Example Menu
+## 🧪 Örnek Menü
 
 ```
-1. Addition         |➕
-2. Subtraction      |➖
-3. Multiplication   |❌
-4. Division         |➗
-5. Factorial        |❗
-6. Exponentiation   |🔼
-7. Root             |🔽
-8. Logarithm        |📊
-9. Trigonometry     |📐
-10. M+              |➕
-11. M-              |➖
-12. MC              |🆑
-13. MR              |🔢
-14. Exit            |🔚
+1. Toplama         |➕
+2. Çıkarma        |➖
+3. Çarpma         |❌
+4. Bölme          |➗
+5. Faktöriyel     |❗
+6. Üs Alma        |🔼
+7. Kök            |🔽
+8. Logaritma      |📊
+9. Trigonometri   |📐
+10. M+            |➕
+11. M-            |➖
+12. MC            |🆑
+13. MR            |🔢
+14. Çıkış         |🔚
 ```
 
 ---
 
-## 🔍 Why Use This Project?
+## 🔍 Neden Bu Projeyi Kullanmalı?
 
-- Simple yet powerful CLI interface for all types of calculations  
-- Great for C# learners: demonstrates lambdas, exception handling, methods, switch-cases, `Func` types, and colored output  
-- Suitable for both learning and real-world use
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
+- Her türlü hesaplama için basit ama güçlü CLI arayüzü  
+- C# öğrenenler için ideal: lambda, hata yakalama, metotlar, switch-case, `Func` tipleri ve renkli çıktı gösterir  
+- Hem öğrenme hem gerçek kullanım için uygundur
 
 ---
 
-## 👤 Author
+## 📄 Lisans
 
-**Kaaner4mir** – Exploring software development with C#
+Bu proje **MIT Lisansı** ile lisanslanmıştır.
+
+---
+
+## 👤 Yazar
+
+**Kaaner4mir** – C# ile yazılım geliştirmeyi keşfediyor
