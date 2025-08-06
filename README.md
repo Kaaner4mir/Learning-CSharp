@@ -1,91 +1,80 @@
+🏧 Otomatik Bankamatik (ATM) Konsol Uygulaması
+📚 Açıklama
+Bu, C# ile Visual Studio 2022 kullanılarak geliştirilmiş konsol tabanlı bir ATM simülasyon uygulamasıdır.
+Hesap bakiye sorgulama, para çekme/yatırma, hesaplar arası transfer, kredi kartı ödemeleri ve fatura ödemeleri gibi bankacılık işlemlerini kullanıcı dostu komut satırı arayüzü üzerinden yapmanızı sağlar.
 
-# 🏧 Automated Teller Machine (ATM) Console Application
+Artık daha kişiselleştirilmiş deneyim için kullanıcı giriş ve kontrolü desteği ile!
 
-## 📚 Description
+✨ Özellikler
+✅ Hesap İşlemleri
+Birden fazla hesap ve kredi kartı bakiyesini görüntüleme
 
-This is a **console-based ATM simulation application** developed in **C#** using **Visual Studio 2022**.  
-It provides a range of banking operations including account balance inquiry, cash withdrawal/deposit, transfers between accounts, credit card payments, and bill payments — all accessible via a user-friendly command line interface.
+Para yatırma
 
-Now with **user login and control** support for a more personalized experience!
+Para çekme (işlem başına minimum 50 TRY)
 
----
+🔄 Transfer İşlemleri
+Kendi hesaplar arasında transfer
 
-## ✨ Features
+Üçüncü şahıs hesaplara transfer
 
-### ✅ Account Operations
-- View balances for multiple accounts and credit cards  
-- Deposit money  
-- Withdraw money (minimum 50 TRY per transaction)  
+💳 Kredi Kartı Ödemeleri
+Bağlı hesaplardan kredi kartı borcu ödeme
 
-### 🔄 Transfer Operations
-- Transfer between own accounts  
-- Transfer to third-party accounts  
+🧾 Fatura Ödemeleri
+Elektrik, su, doğalgaz, internet ve telefon faturası ödeme
 
-### 💳 Credit Card Payments
-- Pay credit card debts from linked accounts  
+👤 Kullanıcı Giriş Sistemi
+Çoklu kullanıcı hesabı destekli güvenli giriş sistemi
 
-### 🧾 Bill Payments
-- Pay electricity, water, natural gas, internet, and phone bills  
+Her kullanıcı sadece kendi hesaplarını ve işlemlerini görebilir
 
-### 👤 User Login System
-- Secure login system with multiple user account support  
-- Each user sees only their own accounts and transactions  
+📜 İşlem Özeti
+İşlem geçmişini detaylarıyla kayıt eder ve gösterir
+(işlem ID, türü, açıklama, tutar, zaman damgası)
 
-### 📜 Transaction Summary
-- Records and displays transaction history with details  
-  _(transaction ID, type, description, amount, timestamp)_
+🔚 Çıkış Fonksiyonu
+Kullanıcı onaylı güvenli program çıkışı
 
-### 🔚 Exit Function
-- Secure program exit with user confirmation  
+▶️ Nasıl Çalıştırılır
+Depoyu klonlayın veya indirin:
 
----
+bash
+Kopyala
+Düzenle
+git clone https://github.com/YourUsername/AutomatedTellerMachine.git
+Projeyi Visual Studio 2022 ile açın.
 
-## ▶️ How to Run
+Ctrl + F5 tuşlarına basarak (debug yapmadan) çalıştırın.
 
-1. Clone or download the repository:
+🧪 Örnek Menü
+markdown
+Kopyala
+Düzenle
+1. Hesap Bakiye Sorgulama       | 🔎  
+2. Para Çekme                   | 💰  
+3. Para Yatırma                 | 💵  
+4. Transfer                    | 💸  
+5. Ödemeler                    | 💲  
+6. İşlem Özeti                 | 📜  
+7. Çıkış                       | 🔚  
+🔍 Neden Bu Projeyi Kullanmalı?
+Gerçek ATM işlemlerini simüle eden pratik bir konsol bankacılık uygulaması
 
-   ```bash
-   git clone https://github.com/YourUsername/AutomatedTellerMachine.git
-   ```
+Aşağıdaki C# kavramlarını gösterir:
 
-2. Open the project in **Visual Studio 2022**.
+Sınıflar, Listeler, LINQ
 
-3. Run the project by pressing `Ctrl + F5` (Run without debugging).
+Hata yakalama (Exception handling)
 
----
+Konsol arayüz tasarımı
 
-## 🧪 Example Menu
+Kullanıcı kimlik doğrulama sistemi
 
-```
-1. Account Balance Inquiry       | 🔎  
-2. Withdraw Money               | 💰  
-3. Deposit Money                | 💵  
-4. Transfer                     | 💸  
-5. Payments                     | 💲  
-6. Transaction Summary          | 📜  
-7. Exit                         | 🔚  
-```
+Nesne yönelimli programlama ve konsol uygulaması geliştirmeyi öğrenmek için ideal
 
----
+📄 Lisans
+Bu proje MIT Lisansı ile lisanslanmıştır.
 
-## 🔍 Why Use This Project?
-
-- Practical console-based banking application simulating real-world ATM operations  
-- Demonstrates C# concepts such as:
-  - Classes, Lists, LINQ
-  - Exception handling
-  - Console UI design
-  - User authentication system  
-- Great for learning **object-oriented programming** and **console app development**
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-## 👤 Author
-
-**Emirhan Kaaner** – Exploring software development with C#
+👤 Yazar
+Emirhan Kaaner – C# ile yazılım geliştirmeyi keşfediyor
