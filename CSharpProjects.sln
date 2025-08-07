@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberGuessingGame", "Numbe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizContest", "QuizContest\QuizContest.csproj", "{28F4311B-1865-429A-8712-793B24DC7C4B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager", "TaskManager\TaskManager.csproj", "{0E7C24F2-3843-40FD-8045-A4FFCC47F7AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{28F4311B-1865-429A-8712-793B24DC7C4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28F4311B-1865-429A-8712-793B24DC7C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28F4311B-1865-429A-8712-793B24DC7C4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E7C24F2-3843-40FD-8045-A4FFCC47F7AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E7C24F2-3843-40FD-8045-A4FFCC47F7AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E7C24F2-3843-40FD-8045-A4FFCC47F7AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E7C24F2-3843-40FD-8045-A4FFCC47F7AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
