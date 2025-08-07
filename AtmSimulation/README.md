@@ -78,12 +78,8 @@ Artık daha kişiselleştirilmiş deneyim için kullanıcı giriş ve kontrolü 
 
 ---
 
-## 📄 Lisans
+# Proje Hakkında
 
-Bu proje MIT Lisansı ile lisanslanmıştır.
-
----
-
-## 👤 Yazar
-
-**Emirhan Kaaner** – C# ile yazılım geliştirmeyi keşfediyor
+**Geliştirici:** Kaaner  
+**Dil:** C#  
+**IDE:** Visual Studio 2022    

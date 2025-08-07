@@ -56,8 +56,8 @@ Temiz ve okunabilir kod: İyi yorumlanmış ve takip etmesi kolay
 
 Eğitici ve sade: Kendi projelerine uyarlaması kolay
 
-📄 Lisans
-Bu proje MIT Lisansı ile lisanslanmıştır.
+# Proje Hakkında
 
-👤 Yazar
-Kaaner4mir – C# ile yazılım geliştirme yolculuğunda keşfe çıkıyor.
+**Geliştirici:** Kaaner  
+**Dil:** C#  
+**IDE:** Visual Studio 2022  

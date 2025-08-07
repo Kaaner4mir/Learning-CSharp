@@ -53,8 +53,8 @@ Kullanıcı girişi, kontrol akışı ve puanlama mantığı üzerine iyi bir al
 
 Daha fazla soru, kategori veya çok oyunculu destek için genişletilebilir yapı
 
-📄 Lisans
-Bu proje MIT Lisansı ile lisanslanmıştır.
+# Proje Hakkında
 
-👤 Yazar
-Emirhan Kaaner – C# ile yazılım geliştirme yolculuğunda keşfe çıkıyor.
+**Geliştirici:** Kaaner  
+**Dil:** C#  
+**IDE:** Visual Studio 2022  .

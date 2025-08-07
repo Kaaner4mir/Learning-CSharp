@@ -82,12 +82,8 @@ Temel aritmetik, trigonometri, kuvvetler, kökler, bellek fonksiyonları ve daha
 
 ---
 
-## 📄 Lisans
+# Proje Hakkında
 
-Bu proje **MIT Lisansı** ile lisanslanmıştır.
-
----
-
-## 👤 Yazar
-
-**Kaaner4mir** – C# ile yazılım geliştirmeyi keşfediyor
+**Geliştirici:** Kaaner  
+**Dil:** C#  
+**IDE:** Visual Studio 2022  
