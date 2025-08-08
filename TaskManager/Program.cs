@@ -28,7 +28,15 @@ class Program
                     ListingTasks();
                     break;
                 case 3:
+                    ListingTasks();
                     UpdatingTask();
+                    break;
+                case 4:
+                    ListingTasks();
+                    DeletingTask();
+                    break;
+                case 5:
+                    Exit();
                     break;
                 default:
                     Invalid();
@@ -38,6 +46,7 @@ class Program
             Loading();
         }
     }
+
     private static void AddTask()
     {
         try
@@ -67,6 +76,7 @@ class Program
             Console.WriteLine($"Bir hata oluştu: {ex.Message}");
         }
     }
+
     private static void ListingTasks()
     {
         Console.Clear();
@@ -82,6 +92,7 @@ class Program
             Console.WriteLine(new string('-', 40));
         }
     }
+
     private static void ExampleTasks()
     {
         _tasks.Add(new Task()
@@ -113,83 +124,11 @@ class Program
             EndTime = DateTime.Now.AddDays(1),
             Status = "Tamamlandı"
         });
-
-        _tasks.Add(new Task()
-        {
-            Id = _rnd.Next(1000, 9999),
-            TaskName = "Sunum Hazırlama",
-            TaskDescription = "Yeni ürün tanıtım sunumunu hazırla.",
-            DateOfCreation = DateTime.Now.AddDays(-4),
-            EndTime = DateTime.Now.AddDays(5),
-            Status = "Yapılacak"
-        });
-
-        _tasks.Add(new Task()
-        {
-            Id = _rnd.Next(1000, 9999),
-            TaskName = "Kod Revizyonu",
-            TaskDescription = "Son commit'lerdeki kodları gözden geçir.",
-            DateOfCreation = DateTime.Now.AddDays(-3),
-            EndTime = DateTime.Now.AddDays(2),
-            Status = "Devam Ediyor"
-        });
-
-        _tasks.Add(new Task()
-        {
-            Id = _rnd.Next(1000, 9999),
-            TaskName = "Veri Analizi",
-            TaskDescription = "Geçen ayın satış verilerini analiz et.",
-            DateOfCreation = DateTime.Now.AddDays(-5),
-            EndTime = DateTime.Now.AddDays(4),
-            Status = "Yapılacak"
-        });
-
-        _tasks.Add(new Task()
-        {
-            Id = _rnd.Next(1000, 9999),
-            TaskName = "Müşteri Görüşmesi",
-            TaskDescription = "Yeni müşteri ile ilk toplantıyı yap.",
-            DateOfCreation = DateTime.Now.AddDays(-2),
-            EndTime = DateTime.Now.AddDays(1),
-            Status = "Tamamlandı"
-        });
-
-        _tasks.Add(new Task()
-        {
-            Id = _rnd.Next(1000, 9999),
-            TaskName = "Depo Kontrolü",
-            TaskDescription = "Stok seviyelerini kontrol et.",
-            DateOfCreation = DateTime.Now.AddDays(-1),
-            EndTime = DateTime.Now.AddDays(3),
-            Status = "Devam Ediyor"
-        });
-
-        _tasks.Add(new Task()
-        {
-            Id = _rnd.Next(1000, 9999),
-            TaskName = "Fatura Kesme",
-            TaskDescription = "Bu ayki müşterilere faturaları gönder.",
-            DateOfCreation = DateTime.Now.AddDays(-3),
-            EndTime = DateTime.Now.AddDays(2),
-            Status = "Devam ediyor"
-        });
-
-        _tasks.Add(new Task()
-        {
-            Id = _rnd.Next(1000, 9999),
-            TaskName = "Sosyal Medya Paylaşımı",
-            TaskDescription = "Yeni kampanya görsellerini paylaş.",
-            DateOfCreation = DateTime.Now,
-            EndTime = DateTime.Now.AddDays(1),
-            Status = "Yapılacak"
-        });
-
     }
+
     private static void UpdatingTask()
     {
-        Console.Clear();
-        ListingTasks();
-        Console.Write("🔎 Güncellemek istediğiniz görevini numarasını giriniz: ");
+        Console.Write("🔎 Güncellemek istediğiniz görev numarasını giriniz: ");
         if (!int.TryParse(Console.ReadLine(), out int id)) { Invalid(); return; }
 
         var task = _tasks.FirstOrDefault(x => x.Id == id);
@@ -210,30 +149,60 @@ class Program
             {
                 case 1:
                     Console.Write("\n➕ Yeni görev adını giriniz: ");
-                    string? newTaskName = Console.ReadLine();
-                    task.TaskName = newTaskName;
+                    task.TaskName = Console.ReadLine();
                     Valid();
                     break;
                 case 2:
                     Console.Write("\n🖋️ Yeni görev açıklamasını giriniz: ");
-                    string? newTaskDescription = Console.ReadLine();
-                    task.TaskDescription = newTaskDescription;
+                    task.TaskDescription = Console.ReadLine();
                     Valid();
                     break;
                 case 3:
-                    Console.Write("\n↩️ Yeni görev açıklamasını giriniz: ");
-                    string? newStatus = Console.ReadLine();
-                    task.Status = newStatus;
+                    Console.Write("\n↩️ Yeni görev durumunu giriniz: ");
+                    task.Status = Console.ReadLine();
                     Valid();
                     break;
                 default:
                     Invalid();
                     break;
-
             }
         }
-
     }
+
+    private static void DeletingTask()
+    {
+        Console.Write("🔎 Silmek istediğiniz görev numarasını giriniz: ");
+        if (!int.TryParse(Console.ReadLine(), out int id)) { Invalid(); return; }
+
+        var task = _tasks.FirstOrDefault(x => x.Id == id);
+
+        if (task == null)
+            IdNotFound();
+        else
+        {
+            _tasks.Remove(task);
+            Valid();
+        }
+    }
+
+    private static void Exit()
+    {
+        Console.Write("❓Çıkmak istediğinize emin misiniz?(E/H): ");
+        string? act = Console.ReadLine();
+
+        if (act == null)
+            Invalid();
+        else
+        {
+            if (act.ToLower() == "e")
+                Environment.Exit(0);
+            else if (act.ToLower() == "h")
+                return;
+            else
+                Invalid();
+        }
+    }
+
     private static void Action(string message1, string message2)
     {
         Console.ForegroundColor = ConsoleColor.Cyan;
@@ -242,27 +211,30 @@ class Program
         Console.WriteLine(message2);
         Console.ResetColor();
     }
+
     private static void Operations()
     {
         Action("1. ", "Görev ekleme                |➕");
         Action("2. ", "Görev listeleme             |📋");
         Action("3. ", "Görev güncelleme            |🔃");
         Action("4. ", "Görev silme                 |🗑️");
-        Action("5. ", "Görev durumu değiştirme     |💱");
-        Action("6. ", "Çıkış                       |❌");
+        Action("5. ", "Çıkış                       |❌");
     }
+
     private static void Invalid()
     {
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("\n❌ Yapmak istediğiniz işlem geçersizdir!");
         Console.ResetColor();
     }
+
     private static void Valid()
     {
         Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("\n✔️ İşleminiz başarılı bir şekilde gerçekleşti");
         Console.ResetColor();
     }
+
     private static void Continue()
     {
         Console.CursorVisible = false;
@@ -272,12 +244,14 @@ class Program
         Console.ReadKey();
         Console.CursorVisible = true;
     }
+
     private static void IdNotFound()
     {
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("\n🆔 ID bulunamadı!");
         Console.ResetColor();
     }
+
     private static void Loading()
     {
         Console.CursorVisible = false;
@@ -301,3 +275,5 @@ class Program
         Console.CursorVisible = true;
     }
 }
+
+

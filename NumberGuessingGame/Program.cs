@@ -12,7 +12,7 @@ class Program
 
         while (true)
         {
-            int correctNumber = _rnd.Next(1, 101); // 1-100 arası dahil
+            int correctNumber = _rnd.Next(1, 101); 
             attempt = 0;
 
             while (attempt < 10)
